@@ -37,10 +37,14 @@ gem 'bulma-rails', '~> 0.8.0'
 # Simple form
 gem 'simple_form', '~> 5.0', '>= 5.0.2'
 
-
+group :production do
+  # gem 'pg', '1.1.4'
+  gem 'pg', '~> 1.2', '>= 1.2.2'
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'sqlite3', '~> 1.4'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
